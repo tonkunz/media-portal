@@ -1,20 +1,64 @@
 <div class="w-screen h-screen">
   <div>Dashboard Video</div>
 
-  <div class="w-full max-w-6xl">
-    <app-vjs-player
-      [options]="{
-        autoplay: true,
-        controls: true,
-        fluid: true,
-        sources: [
-          {
-            src: 'https://midias.pjc.mt.gov.br/Hearing/Video?guid=0c7e0dc2-ed5e-4fdb-b41b-bd4e68c740a1',
-            type: 'video/mp4'
-          }
-        ]
-      }"
-    >
-    </app-vjs-player>
+  <div class="flex">
+    <div class="w-full max-w-4xl">
+      <!-- <app-vjs-player
+        #video
+        [options]="{
+          autoplay: true,
+          controls: true,
+          fluid: true,
+          sources: [
+            {
+              src: 'https://midias.pjc.mt.gov.br/Hearing/Video?guid=0c7e0dc2-ed5e-4fdb-b41b-bd4e68c740a1',
+              type: 'video/mp4'
+            }
+          ]
+        }"
+      >
+      </app-vjs-player> -->
+
+      <app-vjs-player
+        #video
+        [options]="{
+          autoplay: true,
+          controls: true,
+          fluid: true,
+          sources: [
+            {
+              src: 'http://192.168.3.14:9000/drs/0c7e0dc2ed5e4fdbb41bbd4e68c740a1_09-09-2021-154141.dat?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=FN40KI7K9QNJ1BQOQ70I%2F20230113%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230113T224956Z&X-Amz-Expires=604799&X-Amz-Security-Token=eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NLZXkiOiJGTjQwS0k3SzlRTkoxQlFPUTcwSSIsImV4cCI6MTY3MzY1Mzc5MCwicG9saWN5IjoicmVhZHdyaXRlIn0.IKFRPKzoqJG6WKS2bn8pOFvSVfZLfiV7zfgH3sXCHOqfzVULk4E1dlXE1GWIoS0ggk-qseuAW7vguoZLw5i_FA&X-Amz-SignedHeaders=host&versionId=null&X-Amz-Signature=84b31f717145606cc27fd216f4d32218f00b62f134a45896f258ea73d85b81d1',
+              type: 'video/mp4'
+            }
+          ]
+        }"
+      >
+      </app-vjs-player>
+    </div>
+
+    <div class="p-4">
+      <h2>Índices</h2>
+
+
+      <ul>
+        <li>
+          <button (click)="video.setCurrentTime(30)">
+            Timer 30s
+          </button>
+        </li>
+
+        <li>
+          <button (click)="video.setCurrentTime(45)">
+            Timer 45s
+          </button>
+        </li>
+
+        <li>
+          <button (click)="video.setCurrentTime(50)">
+            Timer 50s
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

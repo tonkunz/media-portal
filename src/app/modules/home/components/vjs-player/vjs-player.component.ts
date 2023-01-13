@@ -57,10 +57,14 @@ export class VjsPlayerComponent implements OnInit, OnDestroy {
       this.target.nativeElement,
       this.options,
       function onPlayerReady() {
-        // console.log('onPlayerReady', this);
-        console.log('onPlayerLoad')
+        console.log('onPlayerReady', this);
       }
     );
+  }
+
+  setCurrentTime(time: number): void {
+    this.player.currentTime(time);
+    this.player.play();
   }
 
   // Dispose the player OnDestroy

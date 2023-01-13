@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   constructor() {}
+
+  setTime(param: number): void {
+    console.log('timer: ', param);
+  }
 }
