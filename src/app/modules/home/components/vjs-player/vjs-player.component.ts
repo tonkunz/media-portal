@@ -21,6 +21,9 @@ import videojs from 'video.js';
       preload="none"
     ></video>
   `,
+  styleUrls: [
+    './vjs-player.component.scss'
+  ],
   encapsulation: ViewEncapsulation.None,
 })
 export class VjsPlayerComponent implements OnInit, OnDestroy {
